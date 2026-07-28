@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "secondary";
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-md font-sans text-sm font-semibold transition-[color,background-color,border-color,transform] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-blue focus-visible:ring-offset-2 focus-visible:ring-offset-midnight active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 disabled:active:scale-100 px-6 py-3";
+  "inline-flex items-center justify-center gap-2 rounded-md font-sans text-sm font-semibold transition-[color,background-color,border-color,transform] duration-150 ease-snappy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-blue focus-visible:ring-offset-2 focus-visible:ring-offset-midnight active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 disabled:active:scale-100 px-6 py-3";
 
 const variantStyles: Record<Variant, string> = {
   primary:

@@ -20,6 +20,9 @@
 
   --font-sans: var(--font-manrope);
   --font-display: var(--font-fraunces);
+
+  /* Strong ease-out for UI entrances and press feedback (emil-design-eng) */
+  --ease-snappy: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @keyframes reveal {
@@ -34,7 +37,21 @@
 }
 
 .reveal {
-  animation: reveal 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: reveal 700ms var(--ease-snappy) both;
+}
+
+/* Mobile nav entrance: prevents the panel from just snapping open. */
+.menu-panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 180ms var(--ease-snappy),
+    transform 180ms var(--ease-snappy);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

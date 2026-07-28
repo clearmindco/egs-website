@@ -64,7 +64,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Primary mobile"
-          className="flex flex-col gap-1 border-t border-slate-border px-6 py-4 md:hidden"
+          className="menu-panel flex flex-col gap-1 border-t border-slate-border px-6 py-4 md:hidden"
         >
           {navLinks.map((link) => (
             <a
