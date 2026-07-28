@@ -18,7 +18,7 @@ export function Logo({ className }: { className?: string }) {
         className,
       )}
     >
-      <span className="font-heading text-xl font-bold tracking-tight text-white">
+      <span className="font-sans text-xl font-bold tracking-tight text-white">
         {siteConfig.shortName}
       </span>
       <span className="hidden font-sans text-sm font-medium tracking-wide text-cool-gray sm:inline">

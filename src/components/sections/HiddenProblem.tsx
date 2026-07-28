@@ -1,42 +1,43 @@
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
-import { hiddenProblems } from "@/content/site";
+import { hiddenProblemClosing, hiddenProblems } from "@/content/site";
 
 export function HiddenProblem() {
   return (
     <Section id="hidden-problem" className="bg-graphite">
-      <Container>
-        <div className="max-w-2xl">
-          <p className="font-sans text-sm font-semibold uppercase tracking-widest text-electric-blue">
+      <Container size="wide">
+        <div className="reveal max-w-2xl">
+          <p className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-electric-blue">
             The Hidden Problem
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             It isn&apos;t a lack of effort. It&apos;s a lack of connected
             systems.
           </h2>
-          <p className="mt-4 font-sans text-lg leading-relaxed text-cool-gray">
-            Most established local service businesses aren&apos;t struggling
-            because they aren&apos;t working hard enough. They&apos;re
-            struggling because the systems behind the business were never
-            built to work together.
-          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-16 border-t border-slate-border">
           {hiddenProblems.map((problem) => (
             <div
-              key={problem.title}
-              className="rounded-lg border border-slate-border bg-midnight/60 p-6"
+              key={problem.index}
+              className="grid grid-cols-1 gap-4 border-b border-slate-border py-10 sm:grid-cols-12 sm:gap-8"
             >
-              <h3 className="font-heading text-lg font-semibold text-white">
-                {problem.title}
-              </h3>
-              <p className="mt-2 font-sans text-sm leading-relaxed text-cool-gray">
+              <span className="font-display text-4xl font-bold text-electric-blue/25 sm:col-span-2 sm:text-5xl">
+                {problem.index}
+              </span>
+              <p className="font-display text-2xl font-semibold text-white sm:col-span-4 sm:text-3xl">
+                {problem.line}
+              </p>
+              <p className="font-sans text-base leading-relaxed text-cool-gray sm:col-span-6">
                 {problem.body}
               </p>
             </div>
           ))}
         </div>
+
+        <p className="mt-16 max-w-2xl font-display text-xl italic leading-relaxed text-white sm:text-2xl">
+          {hiddenProblemClosing}
+        </p>
       </Container>
     </Section>
   );

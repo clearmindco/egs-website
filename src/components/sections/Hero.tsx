@@ -1,33 +1,43 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { primaryCta, secondaryCta } from "@/content/site";
+import { primaryCta, secondaryCta, siteConfig } from "@/content/site";
 
 export function Hero() {
   return (
-    <Section className="pt-16 sm:pt-24">
-      <Container className="flex flex-col items-start gap-8">
-        <p className="font-sans text-sm font-semibold uppercase tracking-widest text-electric-blue">
-          Business Performance Company
-        </p>
-        <h1 className="max-w-3xl font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+    <section className="relative overflow-hidden">
+      <Container
+        size="wide"
+        className="reveal flex items-center justify-between border-b border-slate-border py-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-cool-gray"
+      >
+        <span>{siteConfig.name}</span>
+        <span>Business Performance Company — 01</span>
+      </Container>
+
+      <Container
+        size="wide"
+        className="grid grid-cols-1 gap-y-12 pb-24 pt-16 sm:pb-32 sm:pt-24 lg:grid-cols-12 lg:items-end lg:gap-x-8 lg:pb-40 lg:pt-32"
+      >
+        <h1 className="reveal font-display text-5xl font-bold leading-[1.05] tracking-tight text-white [animation-delay:120ms] sm:text-6xl lg:col-span-8 lg:text-7xl xl:text-8xl">
           Better systems create businesses that perform better.
         </h1>
-        <p className="max-w-2xl font-sans text-lg leading-relaxed text-cool-gray sm:text-xl">
-          Elite Growth Strategies helps established local service businesses
-          fix the disconnected systems that quietly cap their growth — so
-          leads get answered, jobs get won, and the business stops depending
-          on the owner being everywhere at once.
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Button href={primaryCta.href} variant="primary">
-            {primaryCta.label}
-          </Button>
-          <Button href={secondaryCta.href} variant="secondary">
-            {secondaryCta.label}
-          </Button>
+
+        <div className="reveal flex flex-col gap-8 [animation-delay:260ms] lg:col-span-4 lg:col-start-9 lg:pb-2">
+          <p className="font-sans text-lg leading-relaxed text-cool-gray">
+            Elite Growth Strategies helps established local service
+            businesses fix the disconnected systems that quietly cap their
+            growth — so leads get answered, jobs get won, and the business
+            stops depending on the owner being everywhere at once.
+          </p>
+          <div className="flex flex-col gap-4">
+            <Button href={primaryCta.href} variant="primary">
+              {primaryCta.label}
+            </Button>
+            <Button href={secondaryCta.href} variant="secondary">
+              {secondaryCta.label}
+            </Button>
+          </div>
         </div>
       </Container>
-    </Section>
+    </section>
   );
 }

@@ -26,19 +26,26 @@ export const navLinks = [{ label: "Our Approach", href: "#point-of-view" }];
 
 export const hiddenProblems = [
   {
-    title: "The owner is still the operating system",
-    body: "Every decision, follow-up, and fire drill still runs through you instead of through the business.",
+    index: "01",
+    line: "They answer the phones.",
+    body: "Every call, every message, every fire drill still runs through you — because no one ever built the systems to catch it first.",
   },
   {
-    title: "Leads are missed or answered too slowly",
-    body: "Opportunities go cold before anyone gets back to them, no matter how much demand is coming in.",
+    index: "02",
+    line: "They chase leads.",
+    body: "Opportunities go cold while you're mid-job, because follow-up depends on someone remembering to do it.",
   },
   {
-    title: "Marketing, sales, and operations run in silos",
-    body: "Each part of the business competes for attention instead of working together as one system.",
+    index: "03",
+    line: "They fix mistakes.",
+    body: "Marketing, sales, and operations were never built to work together — so something is always falling through the cracks.",
   },
   {
-    title: "Growth creates more stress, not more leverage",
-    body: "More jobs should mean more freedom. Instead, it means more to manage and more that can go wrong.",
+    index: "04",
+    line: "They work harder every year.",
+    body: "More jobs should mean more freedom. Instead, growth means more to carry, alone.",
   },
 ] as const;
+
+export const hiddenProblemClosing =
+  "Not because they lack talent. Not because they don't care. Because no one ever helped them build the systems that great companies are built on.";
