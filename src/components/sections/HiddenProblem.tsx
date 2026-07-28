@@ -10,7 +10,7 @@ export function HiddenProblem() {
           <p className="font-sans text-sm font-semibold uppercase tracking-[0.2em] text-electric-blue">
             The Hidden Problem
           </p>
-          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
             It isn&apos;t a lack of effort. It&apos;s a lack of connected
             systems.
           </h2>
@@ -22,10 +22,10 @@ export function HiddenProblem() {
               key={problem.index}
               className="grid grid-cols-1 gap-4 border-b border-slate-border py-10 sm:grid-cols-12 sm:gap-8"
             >
-              <span className="font-display text-4xl font-bold text-electric-blue/25 sm:col-span-2 sm:text-5xl">
+              <span className="font-display text-4xl font-bold text-electric-blue/35 sm:col-span-2 sm:text-5xl">
                 {problem.index}
               </span>
-              <p className="font-display text-2xl font-semibold text-white sm:col-span-4 sm:text-3xl">
+              <p className="font-display text-2xl italic font-medium text-white sm:col-span-4 sm:text-3xl">
                 {problem.line}
               </p>
               <p className="font-sans text-base leading-relaxed text-cool-gray sm:col-span-6">

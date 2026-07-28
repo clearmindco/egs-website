@@ -10,8 +10,9 @@ export function PointOfView() {
         </p>
 
         <div className="mt-6 border-l-2 border-electric-blue pl-6 sm:pl-10">
-          <h2 className="font-display text-3xl font-bold leading-[1.1] text-white sm:text-4xl lg:text-6xl">
-            Better Systems Create Better Businesses™
+          <h2 className="font-display text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-6xl">
+            <span className="text-electric-blue">Better Systems</span> Create
+            Better Businesses™
           </h2>
         </div>
 
